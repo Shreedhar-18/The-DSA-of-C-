@@ -1,0 +1,17 @@
+The below given code helps to initialise an array in c++
+
+#include<iostream>
+using namespace std;
+int main(){
+  int n;
+  cout<<"Enter the Size of Array: ";
+  cin>>n;
+  int Arr[n];
+  for (int i = 0 ; i<n ; i++){
+    cin>>Arr[i];
+  }
+  cout<<"The Array is: ";
+  for (int i = 0 ; i<n ; i++){
+    cout<<Arr[i]<<" ";
+  }
+}
