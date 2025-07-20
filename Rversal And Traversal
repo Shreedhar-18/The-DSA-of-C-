@@ -1,0 +1,44 @@
+The bellow given code shows the logic of Traversing elements of array and reversing an array 
+
+Code::
+#include<iostream>
+using namespace std;
+int main(){
+  int size;
+  cout<<"Enter the Size of Array: ";
+  cin>>size;
+  int Arr[size];
+  for (int i = 0 ; i<size ; i++){
+    cin>>Arr[i];
+  }
+  //Bellow is the logic of Traversal of array :: Shreedhar Tiwari
+  cout<<"The Array is: ";
+  for (int i = 0 ; i<size ; i++){
+    cout<<Arr[i]<<" ";
+  }
+  // :) //
+
+  //below is the logic of Reversed Traversal of array :: Shreedhar Tiwari
+  cout<<endl;
+  cout<<"The Reversed Array is: ";
+  for(int i = size-1 ; i>=0 ; i--){
+    cout<<Arr[i]<<" ";
+  }
+}
+
+Logic of Reversal ::
+
+  cout<<"The Reversed Array is: ";
+  for(int i = size-1 ; i>=0 ; i--){
+    cout<<Arr[i]<<" ";
+  }
+
+Logic Of Traversal ::
+
+  cout<<"The Array is: ";
+  for (int i = 0 ; i<size ; i++){
+    cout<<Arr[i]<<" ";
+  }
+
+
+
