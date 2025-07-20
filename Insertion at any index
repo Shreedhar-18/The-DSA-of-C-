@@ -1,0 +1,29 @@
+The c++ code give below will demonstrate how to insert a value at any index within the array 
+
+#include<iostream>
+using namespace std;
+int main(){
+  int size;
+  cout<<"Enter the Size of Array: ";
+  cin>>size;
+  int Arr[size];
+  for (int i = 0 ; i<size ; i++){
+    cin>>Arr[i];
+  }
+  int index;
+  cout<<"Enter the Index: ";
+  cin>>index;
+  int KeyValue;
+  cout<<"Enter the KeyValue: ";
+  cin>>KeyValue;
+  for (int i = size-1 ; i>=index ; i--){
+    Arr[i+1] = Arr[i];
+  }
+  Arr[index] = KeyValue;
+  cout<<"The Array is: ";
+  for (int i = 0 ; i<size+1 ; i++){
+    cout<<Arr[i]<<" ";
+    
+  }
+      
+}
