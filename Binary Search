@@ -1,0 +1,109 @@
+It is Searching Algorithm which is used on a sorted array toh find the key value the fastest way possible...
+key points to note::
+1. it works on sorted arrays only.
+2. it divides the arrays into half untill the key value is found 
+
+Below i am give 2 logics of same binary search 
+1. logic where user enters the sorted array him/her self 
+2. logic where user enters a random array and the program sorts the array and then go for searching
+
+Logic 1::
+#include<iostream>
+using namespace std;
+
+int main(){
+  int size;
+  cout << "Enter the Size of Array: ";
+  cin >> size;
+
+  int Arr[size];
+  cout << "Enter Sorted Array: ";
+  for (int i = 0; i < size; i++) {
+    cin >> Arr[i];
+  }
+
+  int Val;
+  cout << "Enter the Value to Search: ";
+  cin >> Val;
+
+  int start = 0;
+  int end = size - 1;
+
+  while (start <= end) {
+    int mid = (start + end) / 2;
+
+    if (Arr[mid] == Val) {
+      cout << "The Value is at Index: " << mid << endl;
+      return 0;
+    }
+    else if (Arr[mid] > Val) {
+      end = mid - 1;
+    }
+    else {
+      start = mid + 1;
+    }
+  }
+  cout << "Not Found!" << endl;
+
+  return 0;
+}
+
+
+
+Logic 2 ::
+
+#include<iostream>
+using namespace std;
+void sort(int Arr[],int size){
+  for (int i = 0 ; i<size ; i++){
+    for (int j = i+1 ; j<size ; j++){
+      if(Arr[i]>Arr[j]){
+        int temp = Arr[i];
+        Arr[i] = Arr[j];
+        Arr[j] = temp;
+      }
+    }
+  }
+}
+
+void BinarySearch(int Arr[],int size,int Val){
+  int start =0;
+  int end = size-1;
+  while(start <= end){
+    int mid = (start+end)/2;
+    if(Arr[mid]==Val){
+      cout<<"The Value is at Index: "<<mid<<endl;
+      return;
+    }
+    else if(Arr[mid]>Val){
+      end = mid-1;
+    }
+    else{
+      start = mid+1;
+    }
+  }
+  cout<<"Not Found!"<<endl;
+}
+
+int main(){
+  int size;
+  cout<<"Enter the Size of Array: ";
+  cin>>size;
+  int Arr[size];
+  cout<<"Enter the elements of Array: ";
+  for (int i = 0 ; i<size ; i++){
+    cin>>Arr[i];
+  }
+  sort(Arr,size);
+  cout<<"Sorted Array is: ";
+  for (int i = 0 ; i<size ; i++){
+    cout<<Arr[i]<<" ";
+  }
+  cout<<endl;
+  int Val;
+  cout<<"Enter the Value to Search: ";
+  cin>>Val;
+  BinarySearch(Arr,size,Val);
+  
+}
+
