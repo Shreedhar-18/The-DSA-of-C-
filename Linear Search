@@ -1,0 +1,43 @@
+Linear Search is a sequential search algorithm where each element of the list is checked until the target value is found.
+
+code::
+#include<iostream>
+using namespace std;
+int main(){
+  int size;
+  cout<<"Enter the Size of Array: ";
+  cin>>size;
+  int Arr[size];
+  for (int i = 0 ; i<size ; i++){
+    cin>>Arr[i];
+  }
+  int Val;
+  cout<<"Enter the Value to Search: ";
+  cin>>Val;
+  for (int i = 0 ; i<size ; i++){
+    if(Arr[i]==Val){
+      cout<<"The Value is at Index: "<<i<<endl;
+      break;
+    }
+    
+  }
+  cout<<"The Value is not in the Array.";
+  
+  
+}
+
+
+
+Logic:: 
+
+  int Val;
+  cout<<"Enter the Value to Search: ";
+  cin>>Val;
+  for (int i = 0 ; i<size ; i++){
+    if(Arr[i]==Val){
+      cout<<"The Value is at Index: "<<i<<endl;
+      break;
+    }
+    
+  }
+  cout<<"The Value is not in the Array.";
