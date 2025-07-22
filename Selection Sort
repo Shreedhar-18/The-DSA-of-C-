@@ -1,0 +1,51 @@
+Sorting::
+A coding logic that helps to maintain a beauty sequence of an array 
+
+There are multiple ways of sorting an array in c++
+
+commonly used techniques are 
+1:: Selection Sort
+2:: Bubble Sort
+3:: Merge Sort
+4:: Insertion Sort
+etc
+
+1:: Selection Sort
+
+A sorting algorithm that::
+- Finds the minimum element and places it at the beginning.
+- Always does the same number of comparisons.
+
+Code::
+
+#include<iostream>
+using namespace std;
+
+void SelectionSort(int Arr[],int n){
+  for(int i=0 ; i<n ;i++){
+    for(int j = i+1; j<n ;j++){
+      if(Arr[i]>Arr[j]){
+        int temp = Arr[i];
+        Arr[i] = Arr[j];
+        Arr[j] = temp;
+      }
+    }
+    
+  }
+}
+int main(){
+  int n;
+  cout<<"Enter the Size of Array: ";
+  cin>>n;
+  int Arr[n];
+  cout<<"Enter The array: ";
+  for(int i = 0 ; i< n ;i++){
+    cin>>Arr[i];
+  }
+  cout<<endl;
+  cout<<"Sorted Array is: ";
+  SelectionSort(Arr,n);
+  for(int i = 0 ; i< n ;i++){
+    cout<<Arr[i]<<" ";
+  }
+}
